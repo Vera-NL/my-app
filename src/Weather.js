@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import Loader from "react-loader-spinner";
 
 export default function Weather({city}) {
     function handleResponse(response) {
@@ -10,6 +10,6 @@ export default function Weather({city}) {
    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
    axios.get(apiUrl).then(handleResponse);
     return (
-       <h2>hello uoghzu nnnnn</h2>
-   )
+       <Loader type="Puff" color="green" timeout={5000} />
+   );
 } 
