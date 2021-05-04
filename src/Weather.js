@@ -10,6 +10,6 @@ export default function Weather({city}) {
    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
    axios.get(apiUrl).then(handleResponse);
     return (
-       <Loader type="Puff" color="green" timeout={5000} />
+       <Loader type="Pacman" color="green" timeout={5000} />
    );
 } 
